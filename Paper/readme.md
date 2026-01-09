@@ -1,1 +1,1 @@
-This folder contains the paper and presentation done for IEEE CSCloud 2025 conference
+This folder contains the paper presented at the IEEE CSCloud 2025 conference
