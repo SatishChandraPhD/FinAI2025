@@ -37,6 +37,4 @@ FinGuard is a specialized multi-agent AI system that dynamically routes financia
 ### Installation
 
 ```bash
-git clone https://github.com/SatishChandraPhD/FinAI2025.git
-cd FinAI2025
-pip install -r requirements.txt
+code folder contains the notebooks to be run in Google Colab environment
