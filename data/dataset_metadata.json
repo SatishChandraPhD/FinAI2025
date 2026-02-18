@@ -1,0 +1,10 @@
+{
+  "total_examples": 26034,
+  "train_examples": 22128,
+  "val_examples": 2603,
+  "test_examples": 1303,
+  "avg_quality_score": 3.4140931090112927,
+  "split_strategy": "contest_optimized_85_10_5",
+  "filtering_strategy": "RELAXED",
+  "saved_timestamp": "2025-10-29T14:13:48.139580"
+}
