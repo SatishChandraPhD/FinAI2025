@@ -1,0 +1,100 @@
+{
+  "test_prompts": [
+    "Explain what compound interest is and how it works.",
+    "What is the difference between stocks and bonds?",
+    "Describe the concept of risk diversification in investing.",
+    "How does inflation affect savings and investments?",
+    "What is a mutual fund and how does it work?",
+    "Explain the time value of money concept.",
+    "What are the main types of financial markets?",
+    "Write a Python function to calculate compound interest.",
+    "Create a SQL query to find customers with highest transaction amounts.",
+    "Write JavaScript code to validate an email address.",
+    "Write a Python function to calculate loan EMI.",
+    "Create a pandas DataFrame to store stock price data.",
+    "Summarize the key points about blockchain technology in finance.",
+    "Compare traditional banking with digital banking services.",
+    "Explain the role of central banks in economic stability."
+  ],
+  "reference_responses": [
+    "Compound interest is the interest calculated on the initial principal and also on the accumulated interest of previous periods. It's often called 'interest on interest.' The formula is A = P(1 + r/n)^(nt), where A is the final amount, P is principal, r is annual rate, n is compounding frequency, and t is time in years.",
+    "Stocks represent ownership shares in a corporation, giving holders potential voting rights and dividends. Bonds are debt instruments where investors loan money to entities in exchange for periodic interest payments and principal return at maturity. Stocks offer growth potential but higher risk, while bonds provide stable income with lower risk.",
+    "Risk diversification involves spreading investments across different assets to reduce exposure to any single asset. The principle is that different investments will perform differently under various conditions, so losses in some may be offset by gains in others. This reduces portfolio volatility without necessarily sacrificing returns.",
+    "Inflation erodes purchasing power, meaning money buys less over time. For savings, inflation reduces real value if interest rates don't keep pace. For investments, moderate inflation can be positive for stocks (companies can raise prices) but negative for fixed-income investments (fixed payments lose value).",
+    "A mutual fund pools money from multiple investors to purchase a diversified portfolio of stocks, bonds, or other securities. Professional managers make investment decisions. Investors own shares representing part of the fund's holdings, providing instant diversification and professional management.",
+    "The time value of money states that money available now is worth more than the same amount in the future due to its potential earning capacity. This core principle underpins concepts like present value, future value, and discount rates in finance.",
+    "Financial markets include stock markets (equity trading), bond markets (debt instruments), derivatives markets (futures, options), foreign exchange markets (currency trading), and commodities markets (physical goods). Each serves different purposes and has unique characteristics.",
+    "def calculate_compound_interest(principal, rate, time, compounding_frequency=1):\n    return principal * (1 + rate/compounding_frequency) ** (compounding_frequency * time)",
+    "SELECT customer_id, customer_name, SUM(transaction_amount) as total_amount \nFROM transactions \nGROUP BY customer_id, customer_name \nORDER BY total_amount DESC \nLIMIT 10;",
+    "function validateEmail(email) {\n    const regex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    return regex.test(email);\n}",
+    "def calculate_emi(principal, annual_rate, tenure_months):\n    monthly_rate = annual_rate / 12 / 100\n    return (principal * monthly_rate * (1 + monthly_rate)**tenure_months) / ((1 + monthly_rate)**tenure_months - 1)",
+    "import pandas as pd\nstock_data = pd.DataFrame({\n    'date': pd.date_range('2024-01-01', periods=100),\n    'symbol': ['AAPL'] * 100,\n    'open': [150 + i*0.5 for i in range(100)],\n    'high': [152 + i*0.5 for i in range(100)],\n    'low': [149 + i*0.5 for i in range(100)],\n    'close': [151 + i*0.5 for i in range(100)],\n    'volume': [1000000 + i*10000 for i in range(100)]\n})",
+    "Blockchain in finance enables secure, transparent, decentralized transactions without intermediaries. Key applications include cryptocurrencies, smart contracts, cross-border payments, and trade finance. Benefits include reduced costs, increased transparency, faster settlements, and enhanced security through cryptographic verification.",
+    "Traditional banking offers physical branches, personalized service, and established trust, but has higher fees and slower processes. Digital banking provides 24/7 access, lower fees, faster transactions, and innovative features, but may lack personal touch and face cybersecurity risks. Many banks now offer hybrid models.",
+    "Central banks manage monetary policy, control inflation, regulate commercial banks, maintain financial stability, and act as lender of last resort. They influence economies through interest rates, reserve requirements, and open market operations to balance growth and price stability."
+  ],
+  "prompt_reference_pairs": [
+    [
+      "Explain what compound interest is and how it works.",
+      "Compound interest is the interest calculated on the initial principal and also on the accumulated interest of previous periods. It's often called 'interest on interest.' The formula is A = P(1 + r/n)^(nt), where A is the final amount, P is principal, r is annual rate, n is compounding frequency, and t is time in years."
+    ],
+    [
+      "What is the difference between stocks and bonds?",
+      "Stocks represent ownership shares in a corporation, giving holders potential voting rights and dividends. Bonds are debt instruments where investors loan money to entities in exchange for periodic interest payments and principal return at maturity. Stocks offer growth potential but higher risk, while bonds provide stable income with lower risk."
+    ],
+    [
+      "Describe the concept of risk diversification in investing.",
+      "Risk diversification involves spreading investments across different assets to reduce exposure to any single asset. The principle is that different investments will perform differently under various conditions, so losses in some may be offset by gains in others. This reduces portfolio volatility without necessarily sacrificing returns."
+    ],
+    [
+      "How does inflation affect savings and investments?",
+      "Inflation erodes purchasing power, meaning money buys less over time. For savings, inflation reduces real value if interest rates don't keep pace. For investments, moderate inflation can be positive for stocks (companies can raise prices) but negative for fixed-income investments (fixed payments lose value)."
+    ],
+    [
+      "What is a mutual fund and how does it work?",
+      "A mutual fund pools money from multiple investors to purchase a diversified portfolio of stocks, bonds, or other securities. Professional managers make investment decisions. Investors own shares representing part of the fund's holdings, providing instant diversification and professional management."
+    ],
+    [
+      "Explain the time value of money concept.",
+      "The time value of money states that money available now is worth more than the same amount in the future due to its potential earning capacity. This core principle underpins concepts like present value, future value, and discount rates in finance."
+    ],
+    [
+      "What are the main types of financial markets?",
+      "Financial markets include stock markets (equity trading), bond markets (debt instruments), derivatives markets (futures, options), foreign exchange markets (currency trading), and commodities markets (physical goods). Each serves different purposes and has unique characteristics."
+    ],
+    [
+      "Write a Python function to calculate compound interest.",
+      "def calculate_compound_interest(principal, rate, time, compounding_frequency=1):\n    return principal * (1 + rate/compounding_frequency) ** (compounding_frequency * time)"
+    ],
+    [
+      "Create a SQL query to find customers with highest transaction amounts.",
+      "SELECT customer_id, customer_name, SUM(transaction_amount) as total_amount \nFROM transactions \nGROUP BY customer_id, customer_name \nORDER BY total_amount DESC \nLIMIT 10;"
+    ],
+    [
+      "Write JavaScript code to validate an email address.",
+      "function validateEmail(email) {\n    const regex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    return regex.test(email);\n}"
+    ],
+    [
+      "Write a Python function to calculate loan EMI.",
+      "def calculate_emi(principal, annual_rate, tenure_months):\n    monthly_rate = annual_rate / 12 / 100\n    return (principal * monthly_rate * (1 + monthly_rate)**tenure_months) / ((1 + monthly_rate)**tenure_months - 1)"
+    ],
+    [
+      "Create a pandas DataFrame to store stock price data.",
+      "import pandas as pd\nstock_data = pd.DataFrame({\n    'date': pd.date_range('2024-01-01', periods=100),\n    'symbol': ['AAPL'] * 100,\n    'open': [150 + i*0.5 for i in range(100)],\n    'high': [152 + i*0.5 for i in range(100)],\n    'low': [149 + i*0.5 for i in range(100)],\n    'close': [151 + i*0.5 for i in range(100)],\n    'volume': [1000000 + i*10000 for i in range(100)]\n})"
+    ],
+    [
+      "Summarize the key points about blockchain technology in finance.",
+      "Blockchain in finance enables secure, transparent, decentralized transactions without intermediaries. Key applications include cryptocurrencies, smart contracts, cross-border payments, and trade finance. Benefits include reduced costs, increased transparency, faster settlements, and enhanced security through cryptographic verification."
+    ],
+    [
+      "Compare traditional banking with digital banking services.",
+      "Traditional banking offers physical branches, personalized service, and established trust, but has higher fees and slower processes. Digital banking provides 24/7 access, lower fees, faster transactions, and innovative features, but may lack personal touch and face cybersecurity risks. Many banks now offer hybrid models."
+    ],
+    [
+      "Explain the role of central banks in economic stability.",
+      "Central banks manage monetary policy, control inflation, regulate commercial banks, maintain financial stability, and act as lender of last resort. They influence economies through interest rates, reserve requirements, and open market operations to balance growth and price stability."
+    ]
+  ],
+  "preservation_timestamp": "20251030_032419",
+  "purpose": "RFT_comparison_with_metrics"
+}

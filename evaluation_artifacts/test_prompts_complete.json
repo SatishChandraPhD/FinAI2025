@@ -1,0 +1,27 @@
+{
+  "test_prompts": [
+    "Explain what compound interest is and how it works.",
+    "What is the difference between stocks and bonds?",
+    "Describe the concept of risk diversification in investing.",
+    "How does inflation affect savings and investments?",
+    "What is a mutual fund and how does it work?",
+    "Explain the time value of money concept.",
+    "What are the main types of financial markets?",
+    "Write a Python function to calculate compound interest.",
+    "Create a SQL query to find customers with highest transaction amounts.",
+    "Write JavaScript code to validate an email address.",
+    "Write a Python function to calculate loan EMI.",
+    "Create a pandas DataFrame to store stock price data.",
+    "Summarize the key points about blockchain technology in finance.",
+    "Compare traditional banking with digital banking services.",
+    "Explain the role of central banks in economic stability."
+  ],
+  "prompt_categories": [
+    "financial_concepts",
+    "code_generation",
+    "instruction_following"
+  ],
+  "total_prompts": 15,
+  "preservation_timestamp": "20251030_030924",
+  "purpose": "RFT_comparison_baseline"
+}

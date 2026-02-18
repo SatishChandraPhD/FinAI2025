@@ -1,0 +1,16 @@
+{
+  "evaluation_framework": "transformers_pipeline",
+  "metrics_calculated": [
+    "response_length",
+    "word_count",
+    "success_rate"
+  ],
+  "generation_parameters": {
+    "max_new_tokens": 256,
+    "temperature": 0.7,
+    "do_sample": true,
+    "consistent_across_models": true
+  },
+  "future_use": "RFT_comparison_baseline",
+  "preservation_date": "2025-10-30T03:09:24.634761"
+}
