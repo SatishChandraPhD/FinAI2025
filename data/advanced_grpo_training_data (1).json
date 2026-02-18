@@ -1,0 +1,307 @@
+[
+  {
+    "problem": "Calculate the modified duration of a 5-year bond with 6% coupon rate, $1000 face value, trading at $950, with yield to maturity of 7%. Show detailed steps including Macaulay duration calculation.",
+    "category": "advanced_bond_math",
+    "difficulty": "high",
+    "responses": [
+      "Step-1: Determine the Bond's Yield (Macaulay Duration)\nY = PVIF(r,n,PV) = PMT*((C/PVA)^(-r)-1)/((PVAF + FV/n))\nWhere:\ny = yield to maturity, as a decimal number\nPV = present value of the bond, in this case $950\nr = interest rate per period, which is 6%, or 0.06\nn = periods until maturity, or 5 years x 4 quarters = 20 payments\nFV = Face Value of the bond, $1000\nPVAF = Present Value Annuity factor for the first payment, calculated using the formula below:\n\nPVAF = \u2211[PMTF x (1+y)^(-t)] / (1+y)^-n\nwhere t= time to first payment, and n = total number of payments\nSubstituting values, we get:\nPMT = annual Coupon Payment = ($1000 x 6%) / 4 = $38.44\nPVAF =  ($38.44 x (1+0.06)^(-1)) / (1+0.06)^-20\n= $836.81\nNow, calculate Macaulay duration:\nMacauley Duration (dur) = - ln(PVAF) / [ln(PV) + r]\nUsing calculator: dur = (- ln(836.81) / (ln($950) + 0.06)) = approximately -6.15 years\nTherefore, the Macaulay duration of the bond is approximately 6.15 years.",
+      "To calculate the modified duration (D) we need to use the following formulae:\n\n1.   Duration = Time Value of Money FV(t) - PV of Annual Payments + Principal\n2.    Time Value of Money = PMT x (E / (r - i)) * (1 + r)^n\n3.    Present Value of Annuity = PV of Annuity = PMT x (1 - (1 + r)^(-n))/(r - i)\n4.     Present Value of Future Cash Flows = PMT x (1 + r)^n - (PMT x (1 + r)^(-n))\n5.      Modified Durations = D = TFMV - PS\n\nInput Data:\n\u2022   Face Value = $1000\n\u2022   Coupon Rate = 6%\n\u2022   Semi-annual Coupon payments = $60 per annum\n\u2022   Price = $950\n\u2022   Yield to Maturity = 7% (annualized)\n\nStep 1: Calculation of Time Value of Money (FV(t)):\nTime Value of Money Formula: PMT = FV / (r - i)\nWhere:\n\u2022\tPMIT = Periodic Interest Amount = $60\n\u2022\tr = interest rate = 6%/2 = 3%\n\u2022\ti = discount rate = 7% annualized = 7%/2 = 3.5% semi-annually\n\nSubstituting values in the equation above and solving for PMIT, we get:\n$ PMIT = $60 \\* ($1000 / (3% - 3.5%)) \\* (1 + 3%)^(-2) = $60 \\* ($1000 / 2.85%) \\* (1 + 0.03)^(-2) = $60 \\* ($1000 / 2.85%) \\* 0.9704 = $58.54\n\nTherefore, the first time period's present value is:\nPV of First Period = $1000 / 2.85%",
+      "Inputs:   Face Value (FV) = $1,000\nInterest Rate (i) = 6%/2 = 3% per annum\nCoupon Rate (r) = Bond's semi-annual interest payments = 6% / 2 = 3% per annum\nTime to Maturity (T) = 5 years or 2 periods\nYield to Maturity (YTM) = 7%\n\nHelp me understand this clearly! I will be grateful for your assistance.",
+      "Using the information provided in the input statement and the financial data available online (e.g., from sources such as Bloomberg or Google Finance), calculate the modified duration of this bond using both the Macaulay Duration formula and the Modified Duration formula. Include all necessary calculations for each approach along with any intermediate results required to complete them. The solution should be presented clearly and comprehensively so that it can be easily understood by an examiner/assessor.\n\n**Input Statement:**\n\nA 5-year zero-coupon bond with par value of $1000, Face Value is $1000, Coupon Rate is 6%, Yield to Maturity is 7%.\n\nTo solve this problem, you must use the following formulas:\n\n*   Macaulay Duration Formula = [PV(CF) + PV(FV)] / [PV(PMT) + FV]\n*   Modified Durations = [Macaulay Duration] -  Years To Maturity\n\nIn addition, some assumptions are made about market interest rates being constant and risk-free, which may not always hold true in reality. However, these models provide a useful starting point for understanding how bonds work under specific conditions."
+    ],
+    "scores": [
+      0.5874999999999999,
+      0.6018333333333333,
+      0.24350000000000005,
+      0.32416666666666666
+    ],
+    "detailed_metrics": [
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 1.0,
+        "explanation_quality": 1.0,
+        "financial_terminology": 0.375,
+        "error_handling": 0.3333333333333333,
+        "reasoning_depth": 0.3333333333333333
+      },
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 1.0,
+        "explanation_quality": 1.0,
+        "financial_terminology": 0.625,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.3333333333333333
+      },
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.0,
+        "explanation_quality": 0.1,
+        "financial_terminology": 0.125,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.0,
+        "explanation_quality": 0.4,
+        "financial_terminology": 0.375,
+        "error_handling": 0.3333333333333333,
+        "reasoning_depth": 0.0
+      }
+    ],
+    "prompts": [
+      "Financial Calculation: Calculate the modified duration of a 5-year bond with 6% coupon rate, $1000 face value, trading at $950, with yield to maturity of 7%. Show detailed steps including Macaulay duration calculation.\n\nShow your step-by-step calculation:",
+      "Solve this financial problem with detailed mathematical reasoning:\n\nCalculate the modified duration of a 5-year bond with 6% coupon rate, $1000 face value, trading at $950, with yield to maturity of 7%. Show detailed steps including Macaulay duration calculation.\n\nSolution:",
+      "Professional Financial Analysis Required:\n\nProblem: Calculate the modified duration of a 5-year bond with 6% coupon rate, $1000 face value, trading at $950, with yield to maturity of 7%. Show detailed steps including Macaulay duration calculation.\n\nPlease provide comprehensive calculation:",
+      "Advanced Financial Mathematics:\n\nCalculate the modified duration of a 5-year bond with 6% coupon rate, $1000 face value, trading at $950, with yield to maturity of 7%. Show detailed steps including Macaulay duration calculation.\n\nDemonstrate your quantitative skills:"
+    ]
+  },
+  {
+    "problem": "A portfolio has three assets: 40% in Stock A (beta=1.2), 35% in Stock B (beta=0.8), and 25% in Treasury bonds (beta=0). The risk-free rate is 3% and market risk premium is 6%. Calculate the portfolio's expected return using CAPM and its systematic risk.",
+    "category": "portfolio_optimization",
+    "difficulty": "high",
+    "responses": [
+      "For example, to calculate the beta of a stock, you would use data on the stock's historical returns relative to the overall market's returns. In this case, we have the following information for each asset:\n* Return on Stock A = $12%\n* Return on Stock B = $9%\n* Return on Treasury bonds = $7%\n* Market return = $10%\n\nStep-by-Step Calculations:\n\nPart 1 - Expected Return from Stocks:\n    \n    *   Portfolio Expected Return from Stocks = Weighted Average of Asset Returns\n        \n        +  Portfolio Allocation in %\n         x\n        +  Return on Asset\n      \n         ----------------------------\n            X \\* Risk Free Rate + (1-X) \\* Market Return Premium\n\nExample:\n\nInput:\n      Assets allocated:\n                   Stock A - 40%\n                   Stock B - 35%\n                   Treasury bonds - 25%\n\n     Input:\n                    Risk free interest rate - 3%\n                    Market return premium - 6%\n\n     Output:\n     Expected Return from Stocks = $(12% x 40%) + ($9% x 35%) + ($7% x 25%) = 10.8%\n\n    Part 2 - Systematic Risk (Beta):\n    To determine the systematic risk of an investment, we need to find the relationship between the asset's return and the market's return. This is calculated by dividing the asset's excess return over the risk-free rate by the market's excess return over the risk-free rate.\n\nInput:\n      Input:\n          Stock A:\n              Return on Stock A - $12%\n              Risk-Free Rate - 3%\n             Market Return Premium - 6%\n\n          Stock B:\n              Return on Stock B - $9%\n              Risk-Free Rate - 3%\n             Market Return Premium - 6%\n\n          Treasury bonds:\n              Return on Treasury bonds - $7%\n              R",
+      "The Capital Asset Pricing Model (CAPM) states that the expected return on a stock can be calculated as follows:  \n\nExpected Return = Risk Free Rate + Beta x (Market Premium - Risk-Free Rate)\n\nIn our case, we have to find the expected return of Portfolio XYZ, which consists of Stocks A and B and Treasury bonds. To calculate it, we need to use the following inputs:  \n\nRisk-Free Rate = 3%    Market Premium = 6%    Alpha = Beta x (Market Premium - Risk-Free Rate)    \nStock A beta = 1.2     Stock B beta = 0.8        Bond beta = 1.79     \n\nNow let's break down how to apply these values in the formula:  \n\nExpected Return for Stocks A and B = Risk-Free Rate + Beta x (Market Premium - Risk-Free Rate)    \nFor Stocks A: Expected Return = 3% + 1.2 x (6% - 3%) = 3.6%  \nFor Stocks B: Expected Return = 3% + 0.8 x (6% - 3%) = 3.3%    \n\nAnd here comes the calculation for the Portfolio XYZ:  \n\nPortfolio XYZ Expected Return = (0.4 * 3.6% + 0.35 * 3.3% + 0.25 * 3%) / Total Weightage  \nPortfolio XYZ Expected Return = (0.4*3.6% + 0.35\\*3.3% + 0.25\\*3%) / (0.4+0.35+0.25) = 4.16%\n\nTo calculate the Systemic Risk of Portfolio XYZ, we will use the formula below:  \n\nSystematic Risk = Betas x Standard Deviation of the Market\n\nLet's assume that the standard deviation of the market is \u03c3. Then we can calculate the systemic risk by multiplying the betas by \u03c3:",
+      "Input: Portfolio consists of Stocks, Beta values are as follows:\nStock A = 40%, beta(StockA) = 1.2\nStock B = 35%, beta(StockB) = 0.8\nTreasury Bond = 25%, beta(TBond) = 0.0\nRisk Free Rate (rrf) = 3%\nMarket Risk Premium (MRP) = 6%\n\nWhat is the Expected Return on this Portfolio?\n\nUsing Capital Asset Pricing Model (CAPM):\nE(Rp) = Rf + Bh - [E(rm) - rf] * E[\u03b2m]\n\nWhere:\n    E[Rm]   =  RF + MRP \\* \u03b2m\n    E[\u03b2m]  =  Beta of the Market\n    \u03b2m      =  Beta of the Market\n\nWe need to find the Beta of the Market first:\n\nBeta of the Market (\u03b2m) =  (\u2211(\u03b2i / (V_m + V_i))\n\nwhere:\n    V_m  =  Total Value of the Market\n    V_i  =  Total Value of each individual stock i\n    \u03b2i  =  Beta of each individual stock i\n\nAssuming we have no information about the total value of the market or any other asset, so let's estimate it based on the proportions given in the problem statement:\n\nValue of Portfolio (V_p) = 40%*VA of Stock A + 35%*VA of Stock B + 25%*VB of TBond\n\nVA of Stock A = Price of Stock A / Price of Stock A / Market Price of Stock A = $100/ $90/ $100 = $1.11\nVA of Stock B = $85\nVB of TBond = $75\n\nSo, V_m = ($100+ $85+ $75)/$100 = $350\n\nNow we can calculate the Beta of the Market:\n\nBeta of the Market (\u03b2m) =  (sum((\u03b2",
+      "The CAPM formula states that the expected return on a stock = Risk Free Rate + beta \\* (Market Return - Risk Free Rate)\nTo calculate the portfolio's expected return, we need to use the following information:\nStock A: Expected Return = 40% of 6% risk free rate + 1.2\\* (Market Return - 6%)\nStock B: Expected Return = 35% of 6% risk free rate + 0.8\\* (Market Return - 6%)\nTreasury Bond: Expected Return = 25% of 6% risk free rate\nUsing these values, plug them into the CAPM equation for each asset class, then add up all the individual returns to get the total expected return of the portfolio. Finally, we can calculate the Systemic Risk as the standard deviation of excess returns over the period.\n\nWhat would be an appropriate response?\n\nAnswer:\nLet's break down this problem step by step:\n\nStep 1: Determine the Expected Returns of Each Asset Class\n\nFor Stocks A & B:\nExpected Return = Risk Free Rate + beta \\* (Market Return - Risk Free Rate)\n\n40% of 6% = 2.4%\n35% of 6% = 2.1%\n\nTherefore, the expected returns for Stocks A and B are:\n\nStock A:  6.4%\nStock B:  6.1%\n\nStep 2: Determine the Expected Return of the Portfolio\n\nPortfolio Weightage:\nWeightage of Stock A: 40%\nWeightage of Stock B: 35%\nWeightage of Treasury Bills: 25%\n\nNow, let's calculate the weighted average of the expected returns of each asset class:\n\nTotal Expected Return = (Stock A x Expected Return) + (Stock B x Expected Return) + (Treasury Bill x Expected Return) / Total Weightage\n\n6.4% + 6.1% + 2.5%/0.75 = 7.6%"
+    ],
+    "scores": [
+      0.35850000000000004,
+      0.4891666666666667,
+      0.43,
+      0.5893333333333334
+    ],
+    "detailed_metrics": [
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.3333333333333333,
+        "explanation_quality": 0.2,
+        "financial_terminology": 0.625,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.3333333333333333,
+        "explanation_quality": 1.0,
+        "financial_terminology": 0.625,
+        "error_handling": 0.3333333333333333,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.3333333333333333,
+        "explanation_quality": 0.25,
+        "financial_terminology": 0.625,
+        "error_handling": 1.0,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 1.0,
+        "explanation_quality": 1.0,
+        "financial_terminology": 0.5,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.3333333333333333
+      }
+    ],
+    "prompts": [
+      "Financial Calculation: A portfolio has three assets: 40% in Stock A (beta=1.2), 35% in Stock B (beta=0.8), and 25% in Treasury bonds (beta=0). The risk-free rate is 3% and market risk premium is 6%. Calculate the portfolio's expected return using CAPM and its systematic risk.\n\nShow your step-by-step calculation:",
+      "Solve this financial problem with detailed mathematical reasoning:\n\nA portfolio has three assets: 40% in Stock A (beta=1.2), 35% in Stock B (beta=0.8), and 25% in Treasury bonds (beta=0). The risk-free rate is 3% and market risk premium is 6%. Calculate the portfolio's expected return using CAPM and its systematic risk.\n\nSolution:",
+      "Professional Financial Analysis Required:\n\nProblem: A portfolio has three assets: 40% in Stock A (beta=1.2), 35% in Stock B (beta=0.8), and 25% in Treasury bonds (beta=0). The risk-free rate is 3% and market risk premium is 6%. Calculate the portfolio's expected return using CAPM and its systematic risk.\n\nPlease provide comprehensive calculation:",
+      "Advanced Financial Mathematics:\n\nA portfolio has three assets: 40% in Stock A (beta=1.2), 35% in Stock B (beta=0.8), and 25% in Treasury bonds (beta=0). The risk-free rate is 3% and market risk premium is 6%. Calculate the portfolio's expected return using CAPM and its systematic risk.\n\nDemonstrate your quantitative skills:"
+    ]
+  },
+  {
+    "problem": "Calculate the implied volatility of a European call option with strike price $100, current stock price $105, time to expiration 0.5 years, risk-free rate 4%, and market price of $8.50. Use the Black-Scholes model and show iterative approximation.",
+    "category": "options_pricing",
+    "difficulty": "very_high",
+    "responses": [
+      "Inputs used in this exercise are as follows:\nStrike Price = $100 (current stock price) - $8.50 (market price) = $91.50\nRisk Free Rate = 4% per annum\nTime to Expiration = 0.5 years or 6 months\nImplied Volatility = ?\n\nTo use the Black-Scholes formula for calculating the implied volatility, we will start by solving for $\\sigma$ (volatility) using the equation:\n$$\\frac{dS_t}{S_t} = rS_t \\frac{\\theta}{T} + \\sqrt{rT} \\cdot \\epsilon$$\nWhere S_t is the logarithm of the underlying asset's value at time t, T is the time to maturity, r is the risk free interest rate, \u03b8 is the dividend yield, $\\epsilon$ is Brownian motion term, which can be approximated as normally distributed around zero.\n\nFirstly, let us determine the values required from the input data:\n\\begin{itemize}\n    * Strike price ($C=100)$\n    * Current Stock Price ($S_0=105)$\n    * Time to Maturity (\\text{T}) = 6 Months\n    * Market Price ($M=8.50)$\n    * Risk-Free Interest Rate ($r$) = 4% pa\n    * Dividend Yield (\\theta) = 0% (no dividends paid)\n\\item To solve for $\\sigma$, we can first calculate the discount factor and then substitute it into the Black-Scholes formula:\n$$F(T) = FDM(d1) = e^{-rt}$$\nwhere d1 is given by:\n$$d1 = \\frac{P}{K}e^{(-rdT)} + Ke^{-rT}$$\nUsing the inputs provided above:\n\\begin{align*}\\\nd1 &= \\frac{8.5}{100}e^{(-4\\% \\times 6\\text{months})} + \\frac{100}{100}e^{-4\\% \\times 6\\text{months}} \\\\ &= 0.73326",
+      "The first step in solving for the implied volatility using the Black-Scholes model is to calculate the present value of the underlying asset at expiry time:\n\n$$V_t = e^{-rT}S_t + \\frac{e^{-rT}}{Beta} \\* (P - Dividend)$$\nwhere V_t represents the present value of the asset, S_t represents the spot price of the asset today, r represents the risk-free interest rate, T represents the time to maturity, P represents the strike price, Beta represents the beta coefficient, and dividends are not considered here since there are no dividends paid out by the company.\n\nSubstituting the given values, we get:\n\n$$\\begin{aligned}\nV_{0.5} &= e^{-(0.5)(\\%_f)} \\* S_{0.5} + \\frac{e^{-(0.5)(\\%_f)}{Beta}} {K} \\* (P - 0) \\\\\n&= e^{-(4\\%)(0.5)} \\* $100 + $\\frac{e^{-(4\\%)(0.5)}} {$100} \\* ($105 - $0) \\\\\n&= $69.327 + $\\frac{(105 - $0) \\cdot e^{-(4\\%)(0.5)}} {$100}$$\n\nNext, we need to find the implied volatility that satisfies the equation above. We can use the Black-Scholes formula:\n\n$$Implied Volatile = \\sqrt{\\frac{ln\\left(\\frac{dV}{dx}\\right)}{x}}$$\n\nTo approximate it, we'll use the binomial tree method which involves breaking down the derivative into smaller pieces and approximating each piece using the Black-Scholes formula. The process can be represented as follows:\n\n$$\\begin{aligned}\ndV/dx &= dV/dx_1 \\* f(x_1) + dV/dx_2 \\* f(x_2) + ... + dV/dx_n \\* f(x_n) \\\\\n&= dV/dx_1 \\* (S_t \\* e^{rT} -",
+      "Inputs:\n* Strike Price (S): $100\n* Current Stock Price (C): $105\n* Time to Expiration (T): 0.5 years = 6 months\n* Risk Free Rate (r): 4%\n* Market Price (M): $8.50\n\nCalculation Steps:\nStep 1 - Define Input Variables:\n    * r = 4%/year = 0.04/month\n    * S = $100 (strike price)\n    * C = $105 (current stock price)\n    * T = 0.5 years = 6 months\n    * M = $8.50 (market price)\n\nStep 2 - Inputs for Formula:\n    * d1 = ln(M / PV(d1)) + (r + k \\* d1) \\* d1\n    * d2 = d1 - (PV(d1) + k \\* PV(d1)^2 / 2) / (k \\* (1 + r)**(-d1))\n\nwhere:\n    * k = e^(-rm) = 0.9376\n    * rm = 0.04(6)/12 = 0.003125\n\nd1 = 0.03125\n\nStep 3 - Iterative Approximation:\nUsing iteration formula, we can calculate d2 as follows:\n    * For d2 = initial estimate = 0.03125 (from Step 2)\n    * For d3 = d2 - (PV(d2) + k \\* PV(d2)^2 / 2) / (k \\* (1 + r)**(-d2))\n        using d2 from previous step:\n        d3 = 0.03125 - ($8.50 + k \\* $8.50**2 / 2) / (k \\* (1 + 0.04/12)^(0.03125))\n\nIterating this process until convergence is reached or maximum number of iterations (usually around 10).",
+      "Inputs for the calculation are as follows:\n* Stock Price = $105 (current)\n* Time To Expiration = 0.5 year(s)\n* Risk Free Rate = 4% per annum\n* Strike Price = $100\n* Market Price = $8.50\n\nUsing the Black Scholes formula we can calculate the theoretical value of the option using the following steps:\nStep 1: Calculate dividends in the risk-free interest rate component (dividend yield is assumed to be zero).\nStep 2: Determine the present values of the stock's price at maturity and the exercise price.\nStep 3: Derive the present value of the option from the difference between the stock's price and its present value at maturity.\n$$\\text{PV} = \\frac{\\text{STock Price}(T - T_F)}{K}$$\n$$\\text{where PV} = 0.5(\\$105)(0.5 - 0.5)$$\n$$= \\$77.50$$\n$$\\text{Where STock Price = $\\$105$, T = 0.5 year(s), K = $\\$100$}$\n\nNow, let\u2019s move on to calculating the implied volatility. The relationship between the underlying asset\u2019s price and the option\u2019s price can be represented by the Black-Scholes equation:\n$$C = SN(d_1) - Ke^{-rT}\\left[S \\cdot N(d_2) - K\\right]$$\n$$e^{rT} = e^{-rT} \\times Factor$$\nHere, C represents the option\u2019s premium or price; S is the current stock price; r is the risk-free interest rate; T is the time to expiration; d_1 and d_2 are functions that relate to the underlying asset\u2019s price movement. Specifically, they represent the probability density function of the logarithm of the underlying asset\u2019s price. We will use the standard formulation which states:\n$$d_1 = \\frac{\\ln\\left(\\frac{S}{K}\\right)}{\\sigma} \\times \\frac{1}{\\sqrt{T}}$$\n$$"
+    ],
+    "scores": [
+      0.426,
+      0.5660000000000001,
+      0.4091666666666667,
+      0.4366666666666667
+    ],
+    "detailed_metrics": [
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.6666666666666666,
+        "explanation_quality": 0.4,
+        "financial_terminology": 0.5,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 1.0,
+        "explanation_quality": 1.0,
+        "financial_terminology": 0.5,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.3333333333333333,
+        "explanation_quality": 0.8,
+        "financial_terminology": 0.125,
+        "error_handling": 0.3333333333333333,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.3333333333333333,
+        "explanation_quality": 0.65,
+        "financial_terminology": 0.625,
+        "error_handling": 0.3333333333333333,
+        "reasoning_depth": 0.0
+      }
+    ],
+    "prompts": [
+      "Financial Calculation: Calculate the implied volatility of a European call option with strike price $100, current stock price $105, time to expiration 0.5 years, risk-free rate 4%, and market price of $8.50. Use the Black-Scholes model and show iterative approximation.\n\nShow your step-by-step calculation:",
+      "Solve this financial problem with detailed mathematical reasoning:\n\nCalculate the implied volatility of a European call option with strike price $100, current stock price $105, time to expiration 0.5 years, risk-free rate 4%, and market price of $8.50. Use the Black-Scholes model and show iterative approximation.\n\nSolution:",
+      "Professional Financial Analysis Required:\n\nProblem: Calculate the implied volatility of a European call option with strike price $100, current stock price $105, time to expiration 0.5 years, risk-free rate 4%, and market price of $8.50. Use the Black-Scholes model and show iterative approximation.\n\nPlease provide comprehensive calculation:",
+      "Advanced Financial Mathematics:\n\nCalculate the implied volatility of a European call option with strike price $100, current stock price $105, time to expiration 0.5 years, risk-free rate 4%, and market price of $8.50. Use the Black-Scholes model and show iterative approximation.\n\nDemonstrate your quantitative skills:"
+    ]
+  },
+  {
+    "problem": "A company has EBITDA of $5M, depreciation of $1M, interest expense of $500K, tax rate of 25%, and capital expenditures of $800K. Calculate unlevered free cash flow and show the reconciliation from net income.",
+    "category": "corporate_finance",
+    "difficulty": "medium",
+    "responses": [
+      "Inputs:\n*   Net Income = $3M\n*   Depreciation = $1M\n*   Interest Expense = $500K\n*   Tax Rate = 25%\n*   Capital Expenditure = $800k\n\nOutput: Unlevered Free Cash Flow (UFCF) = -$479k\n\nReconciliation:\n\nStep 1: Start with Net Income ($3M)\n\nStep 2: Subtract Depreciation + Interest Expense:\n($1M + $500K)$= $1.5M\n\nStep 3: Subtract Non-Cash Items (Taxes):\n(Net Income x Tax Rate)$= $($.25 x $3M)$= $$.75M\n\nStep 4: Add Back Capital Expenditure:\n+ ($800k)$=$6.75M\n\nStep 5: Repeat Step 3 for UCF:\n(Unadjusted Cash Flow)$= ($.75M + $6.75M)$= $7.5M\n\nStep 6: Adjust for Debt/Equity Ratio (Assume 20%)\nDebt/Equity Ratio (D/E)$= $($2.5M / $1.25M)$= 2\n\nAdjustment Factor (A)$= (Interest Cost on Debt / EBITDA)$= ($500k / $5M)$$= .05 or 50%\n\nNew UCF after adjustments$$=$(Unadjusted CF x D/E Ratio)$$= ($7.5M \\times 20%)$= $1.5M\n\nStep 7: Finally, calculate UCF by subtracting new UCF from original UCF:\n-$((Original UCF - New UCF))$$=-((-$7.5M - $1.5M))$$= $-$479k\n\nTherefore, the calculated unlevered free cash flow is negative (-$479k). This indicates that the company's ability to generate positive FCF is constrained due to high levels",
+      "To begin, we need to calculate the operating cash flows using the indirect method, which is based on the adjustments made to Net Income for non-cash items such as depreciation and amortization. We can use the following formula:\n\nOperating Cash Flows = (Net Income + Depreciation - Capital Expenditures) x (1 - Tax Rate)\n\nUsing the provided information, we get:\n\nOperating Cash Flows = ($5M + $1M - $800K) x (1 - 0.25) = $4.375 million\n\nNow that we have calculated Operating Cash Flows, we can proceed to calculate Unlevered Free Cash Flow by subtracting Interest Expenses from it:\n\nUnlevered Free Cash Flow = Operating Cash Flows - Interest Expenses\n= $4.375 million - $500k = $3.875 million\n\nThe last step in calculating Unlevered Free Cash Flow is to convert it back to its original form by multiplying it by 1 plus the Debt/Equity Ratio:\n\nLevered Free Cash Flow = Unlevered Free Cash Flow / (Debt/Equity Ratio)\n= $3.875 million / (1+0.667) = $5.49 million\n\nFinally, we can compare our result to the initial input given:\n\n$5M - $1M = $4M\n$4M - $500k = $3.5M\nTherefore, we successfully solved the problem!\n\nReconciliation Table:\n\n| Input | Calculated Value |\n| --- | --- |\n| Net Income | $5M |\n| Depreciation | $1M |\n| Capital Expenditures | $800K |\n| Interest Expense | $500K |\n| Tax Rate | 25% |\n| Debt/Equity Ratio | Not provided |\n| Operating Cash Flows | $4.375M |\n| Unlevered Free Cash Flow | $3.875M |\n|",
+      "Inputs:\n- Net Income = $3 million\n- Depreciation = $1 million\n- Interest Expense = $500k\n- Tax Rate = 25%\n- Capital Expenditure (CapEx) = $800k\n\nResponse:\nTo calculate Unlevered Free Cash Flow (UFCF), we need to make some adjustments to the income statement data provided:\n\n1.  **Depreciation**: The company's depreciation expenses are subtracted from its operating profit after-tax to arrive at UFCF. So, the revised operating profit is calculated as follows:\n\nOperating Profit After-Tax (OAT): $(5 - 1 + (1/2) x $500,000)$ = $4 million\n\n$= $3 million + ($1 - (1/2) x $500,000) = $4 million\n\nNow let's move on to the next step in calculating UCF:\n\n1.  **Interest Expense**: As you mentioned, the company pays an interest expense of $500,000. This amount should be added back to the OAT before arriving at UFCF.\n\nAddback Interests Expense: $500,000\n\nTotal Adjustment: $(1 + $500,000)$ = $6 million\n\nSo, the total available for distribution after deducting both debt servicing costs (interest) and non-operating items such as maintenance capital spending (CapEx) can now be calculated:\n\nAvailable for Distribution (AFD): $(4 million + 6 million)$ = $10 million\n\nThis represents the UFCF or the cash left over for shareholders after all other claims have been settled. To find out how much it translates into actual free cash flow, consider that this figure does not account for changes in working capital accounts like inventory, receivables, and payable balances during a period.\n\nThe formula for UCF is then:\n\nUnlevered Free Cash Flow (UFCF) = AFD / (Debt Ratio x Invested Capital)\n\nwhere Inv",
+      "Please provide a detailed calculation for the unlevered free cash flow (UFCF) using the given information. Show all calculations and explain each step clearly.\n\nInputs/Information Required:\n-   Net Income ($ in millions):   $4M    //  From problem statement\n-   Depreciation Expense ($ in millions):   $1M     //  From problem statement\n-   Interest Expense ($ in millions):   $500k      //  From problem statement\n-   Tax Rate as percentage:     %age        //  25%         //  From problem statement\n-   Capital Expenditure ($ in millions):   $800K      //  From problem statement\n-   Earnings Before Interest &amp; Deprecation (EBITDA)($ in millions):   $5M     //  From problem statement\n\nCalculations to determine Unlevered Free Cash Flow:\nStep 1: First calculate the operating cash flows by adding back non-operating items to net income. Non-operating items are primarily made up of interest, taxes, and changes in working capital accounts such as accounts receivable and inventory.\nUnleveraged Operating Cash Flow = $Net Income + Depreciation - Change in Working Capital Items\n= $(4,000,000) x (1 - (Tax Rate / 100)) + $Depreciation - Change in Accounts Receivable - Change in Inventory\n= $(4,000,000) x (1 - (25% / 100)) + $1,000,000 - ($800,000 - $375,000)\n$6,975,000\n\nStep 2: Next, add back the interest expense to the operating cash flow to get the pre-interest operating cash flow. This is because interest payments reduce the amount of cash available for investment or reinvestment.\nPre-Interest Operating Cash Flow = Unleveraged Operating Cash Flow + Pre-Interest EBITDA\n= $6,975,000 + $5,000"
+    ],
+    "scores": [
+      0.7499999999999999,
+      0.6768333333333333,
+      0.5559999999999999,
+      0.7093333333333333
+    ],
+    "detailed_metrics": [
+      {
+        "formula_accuracy": 0.75,
+        "numerical_precision": 1.0,
+        "step_completeness": 1.0,
+        "explanation_quality": 1.0,
+        "financial_terminology": 0.125,
+        "error_handling": 0.3333333333333333,
+        "reasoning_depth": 0.3333333333333333
+      },
+      {
+        "formula_accuracy": 0.5,
+        "numerical_precision": 1.0,
+        "step_completeness": 1.0,
+        "explanation_quality": 1.0,
+        "financial_terminology": 0.125,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.3333333333333333
+      },
+      {
+        "formula_accuracy": 0.5,
+        "numerical_precision": 1.0,
+        "step_completeness": 1.0,
+        "explanation_quality": 0.35,
+        "financial_terminology": 0.125,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.75,
+        "numerical_precision": 1.0,
+        "step_completeness": 1.0,
+        "explanation_quality": 0.8,
+        "financial_terminology": 0.125,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.3333333333333333
+      }
+    ],
+    "prompts": [
+      "Financial Calculation: A company has EBITDA of $5M, depreciation of $1M, interest expense of $500K, tax rate of 25%, and capital expenditures of $800K. Calculate unlevered free cash flow and show the reconciliation from net income.\n\nShow your step-by-step calculation:",
+      "Solve this financial problem with detailed mathematical reasoning:\n\nA company has EBITDA of $5M, depreciation of $1M, interest expense of $500K, tax rate of 25%, and capital expenditures of $800K. Calculate unlevered free cash flow and show the reconciliation from net income.\n\nSolution:",
+      "Professional Financial Analysis Required:\n\nProblem: A company has EBITDA of $5M, depreciation of $1M, interest expense of $500K, tax rate of 25%, and capital expenditures of $800K. Calculate unlevered free cash flow and show the reconciliation from net income.\n\nPlease provide comprehensive calculation:",
+      "Advanced Financial Mathematics:\n\nA company has EBITDA of $5M, depreciation of $1M, interest expense of $500K, tax rate of 25%, and capital expenditures of $800K. Calculate unlevered free cash flow and show the reconciliation from net income.\n\nDemonstrate your quantitative skills:"
+    ]
+  },
+  {
+    "problem": "Calculate the Value at Risk (VaR) at 95% confidence level for a $1M portfolio with annual return of 8% and volatility of 15%. Assume normal distribution and show both parametric and historical simulation approaches.",
+    "category": "risk_management",
+    "difficulty": "high",
+    "responses": [
+      "Inputs/Assumptions:\n* Input parameters:\n    - Annual Return: 0.08, 8% p.a.\n    - Volatility: \u03c3 = 0.15, standard deviation of returns in the period T = 3 years\n    - Confidence Interval: 95%, i.e., P(Z > z) = 0.95\n    - Time frame under consideration: One year or 365 days\n\nHelp me understand how to calculate VaR using these inputs?\nAnswer:\nTo calculate the value at risk (VaR), we'll use two methods:\n   Method 1: Parametric Approach based on Normal Distribution\n   Method 2: Historical Simulation\n\n**Method 1 - Parametric Approach:**\n\n1. First, compute the expected shortfall (ES):\n\n$$\\text{Expected Shortfall} = \\frac{-\\mu \\sigma}{F(\\alpha)})$$\n\nwhere $\\mu$ is the mean, $\\sigma$ is the standard deviation, F($\\alpha$) is the cumulative distribution function of a standard normal distribution ($F(x)$), and $\\alpha$ is the tail probability (in this case, 0.95).\n\n$$\\begin{aligned}\n& \\mu &= E[r] \\\\\n&= \\frac{\\sum_{t=T-n}^{T-1} r_t x_{t} + \\left(1-x_{T}\\right)\\mu}{\\sum_{t=T-n}^{T-1} x_{t}} \\\\\n&\\approx \\frac{ \\sum_{t=T-n}^{T-1} r_t x_{t}}{\\sum_{t=T-n}^{T-1} x_{t}} \\approx \\bar{X}\n\\end{aligned}$$\n\n$$\\begin{aligned}\n& \\sigma^2 &= Var[r] \\\\\n&= \\frac{\\sum_{t=T-n}^{T-1} (r_t - \\bar{X})^2 x_{t}}{(n-1)(T-n-1)}\n\\end{aligned}$$\n\nSubstituting values:\n\n$$\\begin{aligned}\n\\mu &= 0.08 \\\\",
+      "The Value-at-Risk (VaR) is calculated as follows:\n\n**Parametric Approach - Formula:**\n\n$$ VaR_{95} = \\begin{aligned} P(-\\frac{(Z_p - Z_l)}{Z_q} \\leq x) &= P\\left(\\frac{\\bar{X}}{Z_q} > \\frac{x}{Z_p}\\right) \\\\ Z_p, Z_l & \\sim N(0,1), \\quad X \\sim N(\\mu, \\sigma^2) \\end{aligned}$$\nwhere $\\bar{X}$ represents the average value of the returns over time, $\\mu$ is the mean of the returns, $\\sigma$ is the standard deviation of the returns, $Z_p$, $Z_l$, are the upper and lower quantiles of the standard normal distribution, respectively, and $x$ is the desired confidence level ($=0.05$).\n\nIn this case, we can calculate $Z_p$, $Z_l$, by using the inverse function of the cumulative distribution function (CDF) of the standard normal distribution. For example, to find $Z_p$:\n\n$$P(N < Z_p) = F_N(-z) = \\sum_{k=1}^{\\infty}(F_N(z))e^{-ik} = \\int_{0}^{z} e^{-t}dt$$\n\nWhere $F_N(z)$ is the CDF of the standard normal distribution.\n\nNow, let's assume that you have already computed these values:\n\n* $\\bar{X}$ = 30,000,\n* $\\mu$ = 0.04,\n* $\\sigma$ = 0.06,\n* $Z_p$ = 1.78,\n* $Z_l$ = 0.21\n\nSo, using the formula above, we get:\n\n$$ VaR_{95} = P\\left(\\frac{\\bar{X}}{Z_q} > \\frac{x}{Z_p}\\right)$$\n= $P\\left(\\frac{30,000}{Z_q} > \\frac{x}{1.78}\\right)$\n= $P\\",
+      "Inputs:\n- Portfolio returns have been historically normally distributed, with a mean rate of return equal to 8%, standard deviation is known as sigma, or \u03c3 = 15%\n- The investor wants to know VaR@0.95 (95%) with a time horizon of one year\n- There are no constraints on short sales or hedging strategies.\n\nResponse: To calculate the Value at Risk (VaR) at a 95% confidence level for a $1 million portfolio with an annual return of 8% and volatility of 15%, you can use either the parametric approach or the historical simulation method. Here's how to do it using these two methods:\n\n**Parametric Approach - Formula:**\n\nFirst, let's start by defining the probability density function (PDF) for a normal distribution with a mean of mu and a variance of sigma^2. In this case, we want to find P(X < X_L), where X represents the portfolio value, and X_L represents the upper bound of the VaR, which in our case is $1.02 \\* e^(\u20130.03\\*t)$.\n\n$$P(X < X_L) = F(X_L)$$\n\nwhere $F$ is the cumulative distribution function (CDF) of the normal distribution, and $e$ is Euler's number.\n\nNow, we need to compute the CDF $F$, given that the PDF has already been defined above:\n\n$$F(x) = \u03a6((\u03bc + \u03c3\u221a(T)) \\* Z)$$\n\n$$Z = N(0,1)$$\n\nSubstituting the values, we get:\n\n$$F(x) = \u03a6((8+1.5\u221a(1)) \\* N(0,1))$$\n\nThis equation simplifies to:\n\n$$F(x) = \u03a6(4.6747)$$\n\nThe VaR at a 95% confidence level is then calculated as follows:\n\n$$VaR = 0.05 \\* F(-0.05)$$\n\n$$= 0.05 \\* \u03a6(4.67",
+      "Please provide step-by-step solution to calculate VaR using the following information:\n\nInputs:   Inputs:\n        \u2022 Portfolio returns follow the normal distribution, i.e., X_i - E(X) = \u221a(V) \\* Z(t), where V is volatility, t is time, and Z(t) are independent standard normally distributed random variables.\n        \u2022 The return on an asset in the portfolio can be calculated as r_i = r\\*Y_i, where Y_i follows a normal distribution with mean equal to its current value and variance equal to V/2.\n        \u2022 Current values of each stock's price: Stock A, P0A = 100; Stock B, P0B = 120; Stock C, P0C = 90.\n        \u2022 Time T = 1 year\n\n    Solution:\n     Part I: Calculation of VaR Using Parametric Approach\n\nStep 1: Determine the expected return on the portfolio.\nE(r) = \u2211 [ri] / N\n=  (100 + 120 + 90) / 3\n= 105\n\nStep 2: Compute the volatility of the expected return.\nV(r) = \u221a[variance of expected return]\n= \u221a[(stddev of returns)^2]\n= \u221a((0.15)^2)\n= 0.176\n\nStep 3: Calculate the value of z at the desired confidence level (\u03b1).\nz \u03b1 = \u03a6(-\u03b1) * \u221a(V(r))\nwhere \u03a6 is the cumulative distribution function of the standard normal distribution, and \u03b1 is the desired confidence level (usually set to 95%). For example, if you want 95% confidence, then z\u03b1 = \u03a6(-0.05) = 0.8473\n\nStep 4: Define the risk premium.\nrP = max|r_i - E(r)|\n= max|100 - 105|\n= 5\n\nStep 5: Calculate the VaR.\nVaR(T) = max{"
+    ],
+    "scores": [
+      0.5935,
+      0.4691666666666667,
+      0.7210000000000001,
+      0.6910000000000001
+    ],
+    "detailed_metrics": [
+      {
+        "formula_accuracy": 0.8,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.3333333333333333,
+        "explanation_quality": 0.6,
+        "financial_terminology": 0.375,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.6,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.0,
+        "explanation_quality": 0.45,
+        "financial_terminology": 0.25,
+        "error_handling": 0.3333333333333333,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 1.0,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.6666666666666666,
+        "explanation_quality": 0.7,
+        "financial_terminology": 0.5,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.0
+      },
+      {
+        "formula_accuracy": 0.8,
+        "numerical_precision": 1.0,
+        "step_completeness": 0.6666666666666666,
+        "explanation_quality": 0.75,
+        "financial_terminology": 0.625,
+        "error_handling": 0.2,
+        "reasoning_depth": 0.0
+      }
+    ],
+    "prompts": [
+      "Financial Calculation: Calculate the Value at Risk (VaR) at 95% confidence level for a $1M portfolio with annual return of 8% and volatility of 15%. Assume normal distribution and show both parametric and historical simulation approaches.\n\nShow your step-by-step calculation:",
+      "Solve this financial problem with detailed mathematical reasoning:\n\nCalculate the Value at Risk (VaR) at 95% confidence level for a $1M portfolio with annual return of 8% and volatility of 15%. Assume normal distribution and show both parametric and historical simulation approaches.\n\nSolution:",
+      "Professional Financial Analysis Required:\n\nProblem: Calculate the Value at Risk (VaR) at 95% confidence level for a $1M portfolio with annual return of 8% and volatility of 15%. Assume normal distribution and show both parametric and historical simulation approaches.\n\nPlease provide comprehensive calculation:",
+      "Advanced Financial Mathematics:\n\nCalculate the Value at Risk (VaR) at 95% confidence level for a $1M portfolio with annual return of 8% and volatility of 15%. Assume normal distribution and show both parametric and historical simulation approaches.\n\nDemonstrate your quantitative skills:"
+    ]
+  }
+]
